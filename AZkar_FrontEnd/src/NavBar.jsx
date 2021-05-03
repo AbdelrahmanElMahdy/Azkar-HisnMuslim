@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Navbar, Form, Button,} from "react-bootstrap"
+import {Navbar,} from "react-bootstrap"
 class NavBar extends Component {
     state = {  }
     render() { 
@@ -8,7 +8,7 @@ class NavBar extends Component {
               <div className="container-fluid">
                 <div className="d-inline-block ">
                   <a className="navbar-brand" href="/#">
-                    <i className="fas fa-kaaba fa-2x"></i>
+                    <i className="fas fa-kaaba fa-2x" title="AZKAR" ></i>
                   </a>
                 </div>
                 {/*
@@ -18,11 +18,11 @@ class NavBar extends Component {
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                   </form>
                 </div>  
-               */}  
+                 */}  
                  
                 <div className="d-inline-block ">
                   <a className="nav-link active" href="/#">
-                    <img src="https://cdn2.iconfinder.com/data/icons/avatar-colorize-ii/100/people_character_avatar_smile_2-22-512.png" width="40" height="60" className="img-fluid" alt="muslim img" />
+                    <img src="https://cdn2.iconfinder.com/data/icons/avatar-colorize-ii/100/people_character_avatar_smile_2-22-512.png" width="40" height="60" className="img-fluid" alt="muslim img" title="Muslim" />
                   </a>
                 </div>
               </div>
