@@ -1,17 +1,37 @@
-import {Route} from 'react-router-dom'
+import {Route,Switch,Redirect} from 'react-router-dom'
+import React from 'react';
 
 import './App.css';
 
-import NavBar from './NavBar'
+import NavBar from './components/NavBar'
+import User from './components/User'
+import MainAzkar from './components/MainAzkar'
+import Footer from './components/footer'
+import PlayAzkarButton from './components/PlayAzkarButton'
+import Notfound from './components/Notfound'
+
+
+
 
 function App() {
-  return (
-    <div className="App">
-       <Route path="/" component={NavBar}/>
-       <Route path="/index"    component= { props =>{ return (<div>index</div> )}} />
-       <Route path="/profile"  component= { props =>{ return (<div>Profile</div>  )}} />
-       <Route path="/home"     component= { props =>{ return (<div>Home</div>  )}}  />
-    </div>
+  return (<React.Fragment>
+            
+            <NavBar />
+
+            <Switch className="App">
+                <Route path="/"        exact  component= { ()=>{ return <Redirect to="/home" /> }} />
+                <Route path="/home"    exact  component={ props => { return <PlayAzkarButton class="btn btn-primary" props={props} name='paly azkar'/>}}/>
+                <Route path="/index"   exact  component={ props =>{ return (<div props={props}>index</div> )}} />
+                <Route path="/profile" exact  component= {User} />
+                <Route path="/azkar"   exact  component= { MainAzkar}  />
+                <Route path="*"               component={Notfound} />
+
+              
+            </Switch> 
+            
+            <Footer />
+
+          </React.Fragment>
   );
 }
 
