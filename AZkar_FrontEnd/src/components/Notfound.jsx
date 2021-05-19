@@ -7,11 +7,9 @@ const NotFound=(props) =>{
     return(
     <React.Fragment>
         <div className="Centered ">
-            <h2>page not-found</h2>
-            <button className="btn btn-danger lg" onClick={handleClick}>redirect to home</button>            
-            
-        </div>            
-
+            <h2>Page Not-Found</h2>
+            <button className="btn btn-danger lg" onClick={handleClick}>redirect to home</button>                            
+        </div>
     </React.Fragment>)
                 }
 
