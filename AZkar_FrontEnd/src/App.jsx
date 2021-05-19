@@ -21,7 +21,6 @@ function App() {
             <Switch className="App">
                 <Route path="/"        exact  component= { ()=>{ return <Redirect to="/home" /> }} />
                 <Route path="/home"    exact  component={ props => { return <PlayAzkarButton class="btn btn-primary" props={props} name='paly azkar'/>}}/>
-                <Route path="/index"   exact  component={ props =>{ return (<div props={props}>index</div> )}} />
                 <Route path="/profile" exact  component= {User} />
                 <Route path="/azkar"   exact  component= { MainAzkar}  />
                 <Route path="*"               component={Notfound} />
