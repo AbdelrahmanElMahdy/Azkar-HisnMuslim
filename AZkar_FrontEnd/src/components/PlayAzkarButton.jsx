@@ -8,7 +8,6 @@ class PlayAzkarButton extends Component {
       this.props.props.history.push("/azkar")
     }
 
-
     render() {
         return (
           <div className="Centered">
